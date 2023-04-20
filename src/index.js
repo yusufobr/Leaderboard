@@ -1,4 +1,9 @@
 import './style.css';
-import showScores from './modules/scores.js';
+import fetchData from './modules/scores.js';
+import addScore from './modules/addScore.js';
 
-showScores();
+const refresh = document.getElementById('refresh-btn');
+refresh.addEventListener('click', () => fetchData());
+
+fetchData();
+addScore();

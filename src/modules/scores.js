@@ -1,41 +1,11 @@
-const scores = [
-  {
-    name: 'Yusuf',
-    score: 200,
-  },
-  {
-    name: 'Hamid',
-    score: 100,
-  },
-  {
-    name: 'Walid',
-    score: 150,
-  },
-  {
-    name: 'Said',
-    score: 10,
-  },
-  {
-    name: 'Hafid',
-    score: 300,
-  },
-  {
-    name: 'Rachid',
-    score: 50,
-  },
-  {
-    name: 'Alla',
-    score: 250,
-  },
-];
-
 const listContainer = document.getElementById('list-scores');
 const ul = document.createElement('ul');
 
-const showScores = () => {
+const showScores = (data) => {
   let htmlToAdd = '';
-  scores.forEach((e, index) => {
-    const li = `<li class="${index % 2 === 0 ? 'bg-gray' : ''}">${e.name} : ${e.score}</li>`;
+  data.sort((a, b) => b.score - a.score);
+  data.forEach((e, index) => {
+    const li = `<li class="${index % 2 === 0 ? 'bg-gray' : ''} cap">${e.user} : ${e.score}</li>`;
 
     htmlToAdd += li;
   });
@@ -44,4 +14,15 @@ const showScores = () => {
   listContainer.appendChild(ul);
 };
 
-export default showScores;
+const fetchData = async () => {
+  const key = 'yAtQ05XYzJj2yusufJCO';
+  const base = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${key}/scores`;
+
+  const res = await fetch(base);
+  const data = await res.json();
+  const { result } = data;
+
+  showScores(result);
+};
+
+export default fetchData;

@@ -8,6 +8,7 @@
 .layout {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .show-scores {
@@ -28,6 +29,7 @@
 
 .add-score {
   width: 35%;
+  max-height: 250px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -79,4 +81,8 @@ button {
 
 .bg-gray {
   background-color: rgb(235, 235, 235);
+}
+
+.cap {
+  text-transform: capitalize;
 }
