@@ -1,4 +1,4 @@
 import './style.css';
-import showScores from './modules/scores';
+import showScores from './modules/scores.js';
 
 showScores();
