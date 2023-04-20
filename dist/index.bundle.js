@@ -115,7 +115,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n//# sourceURL=webpack://yusufobr-leaderboard/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_scores_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scores.js */ \"./src/modules/scores.js\");\n\n\n\n(0,_modules_scores_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://yusufobr-leaderboard/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/scores.js":
+/*!*******************************!*\
+  !*** ./src/modules/scores.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst scores = [\n  {\n    name: 'Yusuf',\n    score: 200,\n  },\n  {\n    name: 'Hamid',\n    score: 100,\n  },\n  {\n    name: 'Walid',\n    score: 150,\n  },\n  {\n    name: 'Said',\n    score: 10,\n  },\n  {\n    name: 'Hafid',\n    score: 300,\n  },\n  {\n    name: 'Rachid',\n    score: 50,\n  },\n  {\n    name: 'Alla',\n    score: 250,\n  },\n];\n\nconst listContainer = document.getElementById('list-scores');\nconst ul = document.createElement('ul');\n\nconst showScores = () => {\n  let htmlToAdd = '';\n  scores.forEach((e, index) => {\n    const li = `<li class=\"${index % 2 === 0 ? 'bg-gray' : ''}\">${e.name} : ${e.score}</li>`;\n\n    htmlToAdd += li;\n  });\n\n  ul.innerHTML = htmlToAdd;\n  listContainer.appendChild(ul);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showScores);\n\n//# sourceURL=webpack://yusufobr-leaderboard/./src/modules/scores.js?");
 
 /***/ })
 
