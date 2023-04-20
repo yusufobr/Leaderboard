@@ -50,7 +50,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Add JavaScript files as modules]**
+- **[Add JavaScript to add and call data from the Api]**
 - **[Write plain HTML markup with minimum styling]**
 - **[Use webpack to manage the code]**
 - **[Use Gitflow.]**
