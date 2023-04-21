@@ -50,6 +50,9 @@
 
 ### Key Features <a name="key-features"></a>
 
+- **[Add Dark styles]**
+- **[Add media queries]**
+- **[Filter the repeated users]**
 - **[Add JavaScript to add and call data from the Api]**
 - **[Write plain HTML markup with minimum styling]**
 - **[Use webpack to manage the code]**
