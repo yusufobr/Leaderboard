@@ -1,5 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+* {
+  font-family: "Lato", sans-serif;
+  color: #0e0439;
+}
+
+body {
+  height: 95vh;
+  background: rgb(1, 0, 5);
+  background: linear-gradient(45deg, rgba(1, 0, 5, 1) 0%, rgb(14, 4, 57) 100%);
+}
+
+h1 {
+  color: white;
+  margin-left: -30px;
+  font-size: 50px;
+}
+
+h2 {
+  color: rgba(1, 0, 5, 1);
+}
+
 .container {
-  width: 80vw;
+  width: 85vw;
   margin: 50px auto;
   display: flex;
   flex-direction: column;
@@ -47,14 +70,24 @@
   -moz-box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.2);
 }
 
+button {
+  height: 30px;
+}
+
 form {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 12px;
 }
 
 form input {
   height: 26px;
+  width: 98%;
+}
+
+form button {
+  width: 35%;
 }
 
 ul {
@@ -67,6 +100,14 @@ li {
   border-top: 1px solid gray;
   padding-top: 6px;
   padding-left: 12px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+li:hover {
+  color: white;
+  font-weight: 600;
+  background-color: #0e0439;
+  cursor: pointer;
 }
 
 .recent {
@@ -75,14 +116,30 @@ li {
   align-items: center;
 }
 
-button {
-  height: 30px;
-}
-
 .bg-gray {
   background-color: rgb(235, 235, 235);
 }
 
 .cap {
   text-transform: capitalize;
+}
+
+@media only screen and (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .show-scores {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .add-score {
+    width: 80%;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
