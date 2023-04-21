@@ -4,7 +4,16 @@ const ul = document.createElement('ul');
 const showScores = (data) => {
   let htmlToAdd = '';
   data.sort((a, b) => b.score - a.score);
-  data.forEach((e, index) => {
+
+  const filterData = data.reduce((acc, current) => {
+    const x = acc.find((item) => item.user === current.user);
+    if (!x) {
+      return acc.concat([current]);
+    }
+    return acc;
+  }, []);
+
+  filterData.forEach((e, index) => {
     const li = `<li class="${index % 2 === 0 ? 'bg-gray' : ''} cap">${e.user} : ${e.score}</li>`;
 
     htmlToAdd += li;
